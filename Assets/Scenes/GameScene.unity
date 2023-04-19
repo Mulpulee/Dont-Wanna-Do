@@ -558,13 +558,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4ab828777cdb9f43af908eaaf6f9614, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 8
+  m_speed: 10
   m_wordCount: 0
   m_wordPrefabs:
   - {fileID: 1318748025668430859, guid: 13320c7226e57d04eb7d16220c9f3f53, type: 3}
-  - {fileID: 1318748025668430859, guid: 13320c7226e57d04eb7d16220c9f3f53, type: 3}
-  - {fileID: 1318748025668430859, guid: 13320c7226e57d04eb7d16220c9f3f53, type: 3}
-  - {fileID: 1318748025668430859, guid: 13320c7226e57d04eb7d16220c9f3f53, type: 3}
+  - {fileID: 1318748025668430859, guid: 42061a0b21737354a8d4deb24e957cf6, type: 3}
+  - {fileID: 1318748025668430859, guid: d6b985e0afb7c734c940d73979f17757, type: 3}
+  - {fileID: 1318748025668430859, guid: 4c0f626d16179944e9aa6080597459f7, type: 3}
+  m_range: 8
 --- !u!70 &689403661
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

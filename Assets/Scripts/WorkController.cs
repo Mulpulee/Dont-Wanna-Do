@@ -15,12 +15,13 @@ public class WorkController : MonoBehaviour
     {
         if (collision.tag == "Word")
         {
+            GameObject.FindObjectOfType<GameManagerEx>().AddScore();
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
         else if (collision.tag == "Ground")
         {
-            // 게임오버
+            GameObject.FindObjectOfType<GameManagerEx>().EndGame();
             Destroy(gameObject);
         }
     }

@@ -21,4 +21,9 @@ public class MealGenerator : MonoBehaviour
             Instantiate(m_mealPrefab, new Vector3(Random.Range(-m_spawnRange, m_spawnRange), transform.position.y), Quaternion.identity);
         }
     }
+
+    public void AddDelay(float _value)
+    {
+        if(m_delay > _value) m_delay += _value;
+    }
 }
