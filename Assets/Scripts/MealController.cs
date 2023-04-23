@@ -16,7 +16,7 @@ public class MealController : MonoBehaviour
         if (collision.tag == "Ground") Destroy(gameObject);
         else if (collision.tag == "Player")
         {
-            collision.GetComponent<PlayerController>().ResetCount();
+            collision.GetComponent<PlayerController>().EatMeal();
             Destroy(gameObject);
         }
     }

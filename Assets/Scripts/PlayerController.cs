@@ -9,9 +9,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject[] m_wordPrefabs;
     [SerializeField] private float m_range;
 
+    [SerializeField] private Sprite m_normalPlayer;
+    [SerializeField] private Sprite m_eatingPlayer;
+    [SerializeField] private Sprite m_exautedPlayer;
+
+    private SpriteRenderer m_spriteRenderer;
+
     private void Start()
     {
         m_wordCount = 0;
+        m_spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -24,11 +31,20 @@ public class PlayerController : MonoBehaviour
         {
             Instantiate(m_wordPrefabs[m_wordCount], transform.position, Quaternion.identity);
             m_wordCount++;
+            if (m_wordCount == 4) m_spriteRenderer.sprite = m_exautedPlayer;
         }
     }
 
-    public void ResetCount()
+    public void EatMeal()
     {
         m_wordCount = 0;
+        StartCoroutine(EatMealRoutine());
+    }
+
+    private IEnumerator EatMealRoutine()
+    {
+        m_spriteRenderer.sprite = m_eatingPlayer;
+        yield return new WaitForSeconds(0.5f);
+        m_spriteRenderer.sprite = m_normalPlayer;
     }
 }

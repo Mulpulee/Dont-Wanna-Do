@@ -23,6 +23,14 @@ public class GameManagerEx : MonoBehaviour
         StartCoroutine(IntroScene());
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
     private IEnumerator IntroScene()
     {
         int cutSceneNum = 0;
